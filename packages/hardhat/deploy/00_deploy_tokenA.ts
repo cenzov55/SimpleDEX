@@ -1,5 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
+import { Contract } from "ethers";
 
 const deployTokenA: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
@@ -14,6 +15,10 @@ const deployTokenA: DeployFunction = async function (hre: HardhatRuntimeEnvironm
   });
 
   console.log("TokenA deployed successfully!");
+
+    // Get the deployed contract to interact with it after deploying.
+    // const tokenA = await hre.ethers.getContract<Contract>("YourContract", deployer);
+    // console.log("👋 Initial greeting:", await tokenA.greeting());
 };
 
 export default deployTokenA;

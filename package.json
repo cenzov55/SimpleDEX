@@ -37,8 +37,10 @@
     "verify": "yarn workspace @se-2/hardhat verify"
   },
   "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
     "husky": "~8.0.3",
-    "lint-staged": "~13.2.2"
+    "lint-staged": "~13.2.2",
+    "solc": "0.8.26"
   },
   "packageManager": "yarn@3.2.3",
   "engines": {
